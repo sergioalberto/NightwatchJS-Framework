@@ -1,4 +1,4 @@
-# Nightwatch-Cucumber Framework
+# NightwatchJS-Framework
 
 ## Usage
 ```
@@ -11,8 +11,9 @@ ntl
 Released under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Author
-[Sergio GQ](https://sergioalbertogq.blogspot.com/)
+[Sergio GQ](https://sergioalbertogq.blogspot.com)
 
-Email: squiros@growthaccelerationpartners.com
+Email: sergioalbertogq@gmail.com
 
 Skype: sergiogqts
+

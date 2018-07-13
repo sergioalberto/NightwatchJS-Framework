@@ -19,6 +19,8 @@ Released under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Author
 [Sergio GQ](https://sergioalbertogq.blogspot.com)
+
 Email: sergioalbertogq@gmail.com
+
 Skype: sergiogqts
 
