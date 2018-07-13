@@ -1,0 +1,29 @@
+{
+  "name": "nightwatchjs-framework-demo",
+  "version": "1.0.0",
+  "description": "It's just a demo to show how the framework works",
+  "main": "nightwatch.conf.js",
+  "scripts": {
+    "test": "nightwatch --tag login",
+    "chrome_test": "npm run test -- --env chrome",
+    "chrome_headless_test": "npm run test -- --env headless",
+    "firefox_test": "npm run test -- --env firefox",
+    "parallel_test": "nightwatch -e chrome,firefox",
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome"
+  },
+  "author": "Sergio Gonzalez Quiros <squiros@growthaccelerationpartners.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ssh2-exec": "^0.5.0",
+    "chai": "^4.1.2",
+    "nightwatch-video-recorder": "1.1.0",
+    "chromedriver": "^2.36.0",
+    "cucumber": "^4.0.0",
+    "cucumber-pretty": "^1.4.0",
+    "geckodriver": "^1.10.0",
+    "nightwatch": "^0.9.20",
+    "nightwatch-cucumber": "^9.1.2",
+    "selenium-server": "^3.10.0",
+    "ssh2-connect": "^2.0.4"
+  }
+}
