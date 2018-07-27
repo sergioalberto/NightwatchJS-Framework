@@ -1,4 +1,4 @@
-include .env
+include test/.env
 
 SHELL                := /bin/bash
 DOCKER_COMPOSE       := /usr/local/bin/docker-compose

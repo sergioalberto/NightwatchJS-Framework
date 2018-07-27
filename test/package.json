@@ -5,11 +5,13 @@
   "main": "nightwatch.conf.js",
   "scripts": {
     "test": "nightwatch --tag login",
+    "cli": "nightwatch --tag cli",
     "chrome_test": "npm run test -- --env chrome",
     "chrome_headless_test": "npm run test -- --env headless",
     "firefox_test": "npm run test -- --env firefox",
     "parallel_test": "nightwatch -e chrome,firefox",
-    "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome"
+    "debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome",
+    "report": "node core/reporter.js"
   },
   "author": "Sergio Gonzalez Quiros <squiros@growthaccelerationpartners.com>",
   "license": "MIT",
@@ -24,6 +26,16 @@
     "nightwatch": "^0.9.20",
     "nightwatch-cucumber": "^9.1.2",
     "selenium-server": "^3.10.0",
-    "ssh2-connect": "^2.0.4"
+    "ssh2-connect": "^2.0.4",
+    "child_process": "^1.0.2",
+    "shelljs": "^0.8.2",
+    "nodemailer": "^4.6.7",
+    "handlebars": "^4.0.11",
+    "nightwatch-html-reporter": "^2.0.5",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7",
+    "cucumber-html-reporter": "^4.0.3",
+    "dotenv": "^6.0.0",
+    "ssh-exec": "^2.0.0"
   }
 }

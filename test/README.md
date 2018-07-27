@@ -1,6 +1,13 @@
-# NightwatchJS-Framework
+# Nightwatch-Cucumber Framework
 
-## Usage
+## Usage (Ubuntu)
+```
+sudo npm i -g ntl
+make build
+make run
+```
+
+## Usage (Windows)
 ```
 npm i -g ntl
 npm i
@@ -16,4 +23,3 @@ Released under the [MIT license](https://opensource.org/licenses/MIT).
 Email: sergioalbertogq@gmail.com
 
 Skype: sergiogqts
-

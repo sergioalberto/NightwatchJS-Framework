@@ -1,10 +1,6 @@
 const { client } = require('nightwatch-cucumber')
-const { When, Then } = require('cucumber')
+const { When, Then, And, Given, But } = require('cucumber')
 var expect = require('chai').expect;
-
-//var SSHClient = require('../core/sshClient.js');
-//var ssh = new SSHClient("192.168.0.18", "pi", "raspberry")
-//ssh.runCommand("ls")
 
 global.employeesPage = client.page.employeesPage()
 

@@ -5,6 +5,7 @@ const geckodriver = require('geckodriver');
 require('nightwatch-cucumber')({
     cucumberArgs: [
         '--require', 'hooks.js',
+        '--require', 'globalsModule.js',
         '--require', 'step_definitions',
         '--format', 'node_modules/cucumber-pretty',
         '--format', 'json:reports/cucumber.json',
@@ -17,6 +18,7 @@ module.exports = {
     page_objects_path: 'page_objects',
     live_output: false,
     disable_colors: false,
+    globals_path: "./globalsModule.js",
     selenium: {
         start_process: true,
         server_path: seleniumServer.path,
@@ -47,9 +49,6 @@ module.exports = {
                 browserName: 'chrome',
                 javascriptEnabled: true,
                 acceptSslCerts: true
-                //chromeOptions: {
-                //  args: ['incognito', 'headless', 'no-sandbox', 'disable-gpu']
-                //}
             },
             selenium: {
                 cli_args: {

@@ -26,16 +26,22 @@ const browser = {
 }
 
 BeforeAll((options, callback) => {
+    console.log("-------------------------------------------------------------------")
     console.log("Before all scenarios.")
+    console.log("-------------------------------------------------------------------")
 })
 
 AfterAll((options, callback) => {
+    console.log("-------------------------------------------------------------------")
     console.log("After all scenarios have completed.")
+    console.log("-------------------------------------------------------------------")
 })
 
 Before((options, callback) => {
+    console.log("###################################################################")
     console.log("Before each scenario.")
-
+    console.log("###################################################################")
+    console.log('Runnung the TC: '+options.sourceLocation.uri)
     browser.currentTest.module = options.pickle.name
     require('nightwatch-video-recorder').start(browser, callback)
 })
@@ -46,7 +52,9 @@ Before({tags: "@login and @regression"}, function () {
 })
 
 After((options, callback) => {
+    console.log("###################################################################")
     console.log("After each scenario.")
+    console.log("###################################################################")
 
     browser.currentTest.module = options.pickle.name
     browser.currentTest.results.failed = options.result.status == 'failed'

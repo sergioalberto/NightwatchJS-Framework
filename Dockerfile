@@ -5,11 +5,11 @@
 FROM sergiogq/js_automation_framework
 
 # Install NodeJS:
-RUN apt-get install -y nodejs \
-    npm \
-    curl \
-    wget \
-    build-essential
+#RUN apt-get install -y nodejs \
+#    npm \
+#    curl \
+#    wget \
+#    build-essential
 
 RUN npm install -g yarn
 RUN npm install -g n
@@ -28,7 +28,8 @@ RUN npm i -g ntl && \
 ADD entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
 
-ENV FIREFOX WAT
+# To get from .env file
+#ENV FIREFOX WAT
 
 # Add node system user/group with uid/gid 1000.
 # This is a workaround for boot2docker issue #581, see

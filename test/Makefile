@@ -1,15 +1,22 @@
-include ../.env
+include .env
 
-SHELL                := /bin/bash
+SHELL := /bin/bash
 
 .PHONY: default
 default: run
 
 .PHONY: build
 build:
-	@npm i -g ntl
 	@npm i
 
 .PHONY: run
 run:
 	@ntl
+
+.PHONY: runCli
+runCli:
+	@npm run cli
+
+.PHONY: report
+report:
+	@npm run report
