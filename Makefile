@@ -1,4 +1,4 @@
-include .env
+include test/.env
 
 SHELL                := /bin/bash
 DOCKER_COMPOSE       := /usr/local/bin/docker-compose
@@ -44,13 +44,14 @@ run:
 debug:
 	@mkdir -p videos screenshots reports
 	@chown 1000:1000 videos screenshots reports
-	$(DOCKER_COMPOSE_BASE) up -d hub chrome-debug firefox-debug
 	@if [ $$browser = "Firefox" ]; then\
-	    echo "Running Firefox browser on debugging mode ...";\
+		echo "Running Firefox browser on debugging mode ...";\
+		$(DOCKER_COMPOSE_BASE) up -d hub firefox-debug;\
 		$(DOCKER_COMPOSE_BASE) run --name $container -e FIREFOX=true --rm nightwatch;\
 	fi
 	@if [ $$browser = "Chrome" ]; then\
-	    echo "Running Chrome browser on debugging mode ...";\
+		echo "Running Chrome browser on debugging mode ...";\
+		$(DOCKER_COMPOSE_BASE) up -d hub chrome-debug;\
 		$(DOCKER_COMPOSE_BASE) run --name $container -e FIREFOX=false --rm nightwatch;\
 	fi
 
