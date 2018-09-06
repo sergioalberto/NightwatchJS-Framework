@@ -4,7 +4,7 @@ echo "Run on Firefox: $FIREFOX"
 
 if [ $FIREFOX == 'true' ]
 then
-	npm run firefox_test
+	npm run firefox-test
 else
-	npm run chrome_test
+	npm run chrome-test
 fi

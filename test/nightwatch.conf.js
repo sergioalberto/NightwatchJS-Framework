@@ -52,7 +52,7 @@ module.exports = {
         delete_on_success: true,
         path: 'videos',
       },
-      launch_url: 'https://vacations-management.herokuapp.com/',
+      launch_url: 'https://vacations-management.herokuapp.com/users/sign_in',
       selenium_port: 4444,
       selenium_host: process.env.SELENIUM_HOST || 'localhost',
       desiredCapabilities: {
@@ -84,7 +84,7 @@ module.exports = {
         javascriptEnabled: true,
         acceptSslCerts: true,
         chromeOptions: {
-          args: ['headless', 'no-sandbox', 'disable-gpu'],
+          args: ['use-fake-ui-for-media-stream', '--headless', '--no-sandbox', 'disable-gpu'],
         },
 
       },

@@ -26,7 +26,7 @@ module.exports = class Report {
       jsonFile: 'reports/cucumber.json',
       output: 'reports/index.html',
       reportSuiteAsScenarios: true,
-      launchReport: launchReport,
+      launchReport,
       metadata: {
         'App Version': '0.1',
         'Test Environment': 'STAGING',
@@ -124,7 +124,7 @@ module.exports = class Report {
       }];
 
       email.sendAttachmentEmail(process.env.EMAIL_TO, `Automation Results: ${myDate}`, 'Automation Results',
-          attachments, this.bodyEmail);
+        attachments, this.bodyEmail);
     }
   }
 };

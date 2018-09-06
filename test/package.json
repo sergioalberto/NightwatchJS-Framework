@@ -13,8 +13,8 @@
     "parallel-test": "nightwatch -e chrome,firefox --tag login; node libs/reporter.js",
     "chrome-debug": "node --inspect-brk node_modules/.bin/nightwatch --env chrome",
     "report": "node libs/reporter.js -l true",
-    "eslint": "eslint ./",
-    "eslint-fix": "eslint ./ --fix"
+    "lint": "eslint ./",
+    "lint-fix": "eslint ./ --fix"
   },
   "author": "Sergio Gonzalez Quiros <sergioalbertogq@gmail.com>",
   "license": "MIT",
